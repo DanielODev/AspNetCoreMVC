@@ -22,7 +22,10 @@ namespace SalesWebMvc.Services
         }
 
         public void Insert(Seller obj)
-        {   //insere o obj Seller na lista
+        {
+            obj.Department = _context.Department.First();
+            
+            //insere o obj Seller na lista
             _context.Add(obj);
             // salva as alterções no DB.
             _context.SaveChanges();
