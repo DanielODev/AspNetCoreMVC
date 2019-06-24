@@ -13,9 +13,10 @@ namespace SalesWebMvc.Models
         public double BaseSalary { get; set; }
         // association(possui um departamento)
         public Department Department { get; set; }
-        public ICollection<SalesRecord> Sales { get; set; } = new List<SalesRecord>();
         // incluir o departmentID para não criar campo nulo no BD.
-        public int DepartmentID { get; set; }
+        public int DepartmentId { get; set; }
+        public ICollection<SalesRecord> Sales { get; set; } = new List<SalesRecord>();
+
 
 
         //constructor
