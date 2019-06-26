@@ -43,7 +43,7 @@ namespace SalesWebMvc.Services
             }
             if (maxDate.HasValue)
             {
-                result = result.Where(x => x.Date >= maxDate.Value);
+                result = result.Where(x => x.Date <= maxDate.Value);
             }
             //quando agrupar os resultados não serão mais um list, será uma coleção IGrouping(TKey, TElement).
             //
